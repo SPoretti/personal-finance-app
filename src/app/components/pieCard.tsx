@@ -1,7 +1,17 @@
 "use client";
 import PieGraph from "./pieGraph";
 import { useEffect, useState } from "react";
-import data from "../data/data.json";
+import walletMovements from "../data/walletmovements.json";
+
+interface WalletMovement {
+  type: "expense" | "income";
+  category?: string;
+  source?: string;
+  amount: number;
+  description?: string;
+  activityType?: string;
+  date: string; // ISO date format
+}
 
 interface ChartData {
   labels: string[];
@@ -10,25 +20,49 @@ interface ChartData {
 
 export default function PieCard() {
   const [chartData, setChartData] = useState<ChartData>({
-    labels: data.labels,
-    values: data.values,
+    labels: [],
+    values: [],
   });
 
   useEffect(() => {
+    // Type assertion for walletMovements
+    const movements = walletMovements as WalletMovement[];
+
+    // Aggregate data by activityType
+    const activityTypeCounts: Record<string, number> = {};
+
+    movements.forEach((movement) => {
+      if (movement.activityType) {
+        activityTypeCounts[movement.activityType] =
+          (activityTypeCounts[movement.activityType] || 0) + 1;
+      }
+    });
+
+    // Convert aggregated data to chart data format
+    const labels = Object.keys(activityTypeCounts);
+    const values = Object.values(activityTypeCounts);
+
     setChartData({
-      labels: data.labels,
-      values: data.values,
+      labels,
+      values,
     });
   }, []);
 
   return (
-    <div className="h-full w-full bg-neutral-100 bg-opacity-40 shadow-xl rounded-xl flex flex-col justify-evenly">
-      <h1 className="text-3xl text-slate-800 mx-10">Pie Graph Spese</h1>
-      <PieGraph data={chartData} />
-      <div className="w-full flex justify-end items-end">
-        <button className="border-2 border-solid border-emerald-500 rounded-md p-2">
+    <div className="h-full w-full bg-neutral-100 bg-opacity-40 shadow-xl rounded-xl flex flex-col p-4">
+      <h1 className="text-3xl text-gray-200 mb-4">
+        Pie Graph by Activity Type
+      </h1>
+      <div className="flex-1 flex items-center justify-center mb-4">
+        <PieGraph data={chartData} />
+      </div>
+      <div className="w-full flex justify-end">
+        <a
+          className="border-2 border-solid border-emerald-500 rounded-md p-2 text-gray-200"
+          href="/wallet"
+        >
           Dettagli
-        </button>
+        </a>
       </div>
     </div>
   );

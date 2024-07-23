@@ -1,0 +1,114 @@
+[
+  {
+    "type": "income",
+    "source": "Salary",
+    "amount": 3000,
+    "description": "Monthly salary",
+    "activityType": "work",
+    "date": "2024-07-01"
+  },
+  {
+    "type": "expense",
+    "category": "food",
+    "amount": 150,
+    "description": "Grocery shopping",
+    "activityType": "personal",
+    "date": "2024-07-02"
+  },
+  {
+    "type": "income",
+    "source": "Freelance",
+    "amount": 500,
+    "description": "Freelance work payment",
+    "activityType": "work",
+    "date": "2024-07-05"
+  },
+  {
+    "type": "expense",
+    "category": "entertainment",
+    "amount": 50,
+    "description": "Movie tickets",
+    "activityType": "fun",
+    "date": "2024-07-06"
+  },
+  {
+    "type": "expense",
+    "category": "utilities",
+    "amount": 200,
+    "description": "Electricity bill",
+    "activityType": "home",
+    "date": "2024-07-07"
+  },
+  {
+    "type": "income",
+    "source": "Investment",
+    "amount": 800,
+    "description": "Dividends from stocks",
+    "activityType": "investment",
+    "date": "2024-07-10"
+  },
+  {
+    "type": "expense",
+    "category": "transport",
+    "amount": 100,
+    "description": "Gasoline",
+    "activityType": "commute",
+    "date": "2024-07-12"
+  },
+  {
+    "type": "expense",
+    "category": "food",
+    "amount": 75,
+    "description": "Dinner out",
+    "activityType": "personal",
+    "date": "2024-07-15"
+  },
+  {
+    "type": "income",
+    "source": "Gift",
+    "amount": 200,
+    "description": "Birthday gift",
+    "activityType": "personal",
+    "date": "2024-07-18"
+  },
+  {
+    "type": "expense",
+    "category": "health",
+    "amount": 120,
+    "description": "Doctor visit",
+    "activityType": "health",
+    "date": "2024-07-20"
+  },
+  {
+    "type": "income",
+    "source": "Rental",
+    "amount": 1500,
+    "description": "Rental income",
+    "activityType": "investment",
+    "date": "2024-07-22"
+  },
+  {
+    "type": "expense",
+    "category": "shopping",
+    "amount": 300,
+    "description": "New clothes",
+    "activityType": "personal",
+    "date": "2024-07-25"
+  },
+  {
+    "type": "income",
+    "source": "Freelance",
+    "amount": 600,
+    "description": "Freelance project payment",
+    "activityType": "work",
+    "date": "2024-07-28"
+  },
+  {
+    "type": "expense",
+    "category": "travel",
+    "amount": 500,
+    "description": "Flight tickets",
+    "activityType": "vacation",
+    "date": "2024-07-30"
+  }
+]
