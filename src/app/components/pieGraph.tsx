@@ -85,7 +85,7 @@ const PieChart = ({ data }: PieChartProps) => {
   };
 
   return (
-    <div className="w-full h-40 mx-auto">
+    <div className="w-full h-full mx-auto">
       <Pie data={chartData} options={chartOptions} />
     </div>
   );

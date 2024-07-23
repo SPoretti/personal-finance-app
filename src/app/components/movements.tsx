@@ -1,5 +1,4 @@
 "use client";
-import LineGraph from "./lineGraph";
 import { useEffect, useState } from "react";
 import walletMovements from "../data/walletmovements.json";
 
@@ -14,19 +13,13 @@ interface WalletMovement {
   balance: number;
 }
 
-interface ChartData {
-  labels: string[];
-  values: number[];
-}
-
 type ViewOption = "currentMonth" | "allTransactions";
 
-export default function WideCard() {
-  const [chartData, setChartData] = useState<ChartData>({
-    labels: [],
-    values: [],
-  });
+export default function Movements() {
   const [viewOption, setViewOption] = useState<ViewOption>("currentMonth");
+  const [filteredMovements, setFilteredMovements] = useState<WalletMovement[]>(
+    [],
+  );
 
   useEffect(() => {
     // Type assertion for walletMovements
@@ -38,7 +31,7 @@ export default function WideCard() {
     const currentMonth = currentDate.getMonth();
 
     // Filter movements based on the selected view
-    const filteredMovements = movements.filter((movement) => {
+    const filtered = movements.filter((movement) => {
       const movementDate = new Date(movement.date);
       if (viewOption === "currentMonth") {
         return (
@@ -50,45 +43,20 @@ export default function WideCard() {
     });
 
     // Sort movements by date
-    filteredMovements.sort(
+    filtered.sort(
       (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
     );
 
-    // Initialize balance and arrays for storing results
-    let balance = 0;
-    const balanceChanges: number[] = [];
-    const labels: string[] = [];
-
-    // Iterate over the filtered movements
-    filteredMovements.forEach((movement) => {
-      // Check the type and adjust balance accordingly
-      if (movement.type === "income") {
-        balance += movement.amount;
-      } else if (movement.type === "expense") {
-        balance -= movement.amount;
-      } else {
-        // Handle unexpected type
-        console.error(`Unexpected movement type: ${movement.type}`);
-      }
-
-      // Store the updated balance and date in the arrays
-      balanceChanges.push(balance);
-      labels.push(new Date(movement.date).toLocaleDateString());
-    });
-
-    // Update chart data
-    setChartData({
-      labels,
-      values: balanceChanges,
-    });
-  }, [viewOption]);
+    // Update state with filtered movements
+    setFilteredMovements(filtered);
+  }, [viewOption]); // Depend on viewOption to re-run the effect when it changes
 
   return (
     <div className="h-full w-full dark:bg-gradient-to-r dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 shadow-xl rounded-xl flex flex-col p-4">
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl dark:text-gray-200">Movements</h1>
+        <h1 className="text-3xl dark:text-gray-200">List</h1>
         <select
-          className="p-2 rounded bg-transparent border-rose-500 border text-gray-200 outilne-none"
+          className="p-2 rounded bg-transparent border-rose-500 border dark:text-gray-200 outline-none"
           value={viewOption}
           onChange={(e) => setViewOption(e.target.value as ViewOption)}
         >
@@ -96,8 +64,31 @@ export default function WideCard() {
           <option value="allTransactions">All Transactions</option>
         </select>
       </div>
-      <div className="flex-1 flex items-center justify-center mb-4">
-        <LineGraph data={chartData} />
+      <div className="flex-1 overflow-y-auto">
+        <ul className="text-gray-200">
+          {filteredMovements.map((movement, index) => (
+            <li
+              key={index}
+              className="mb-2 p-2 shadow-md dark:bg-gradient-to-r dark:from-slate-700 dark:via-slate-800 dark:to-slate-700 rounded"
+            >
+              <div className="flex justify-between">
+                <span>{new Date(movement.date).toLocaleDateString()}</span>
+                <span
+                  className={
+                    movement.type === "income"
+                      ? "text-emerald-400"
+                      : "text-rose-400"
+                  }
+                >
+                  {movement.type === "income" ? "+" : "-"}${movement.amount}
+                </span>
+              </div>
+              <div className="text-sm dark:text-gray-400">
+                {movement.description || movement.category || "No description"}
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
     </div>
   );

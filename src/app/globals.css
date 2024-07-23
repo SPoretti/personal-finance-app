@@ -2,16 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles/globals.css */
+
+@import url("@fontsource/inter/400.css"); /* Import Inter font regular weight */
+@import url("@fontsource/inter/700.css"); /* Import Inter font bold weight */
+
+/* Apply global font styles */
+body {
+  font-family: "Inter", sans-serif;
+  color: #e5e7eb; /* Tailwind's text-gray-200 color */
+}
+
 .sidebar-list-item {
-  @apply hover:bg-gray-200 hover:text-gray-800;
-  @apply text-gray-200 bg-gray-700 rounded-xl;
-  @apply delay-150 transition-all duration-300;
-  @apply shadow-lg;
+  @apply dark:hover:text-gray-500;
+  @apply dark:bg-gradient-to-r dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 rounded-xl;
+  @apply delay-75 transition-all duration-300;
+  @apply shadow-lg dark:text-gray-300;
   @apply w-4/5 h-10 my-2 flex items-center justify-center;
 }
 
 .buttonBasics {
-  @apply border-2 border-solid border-emerald-500;
-  @apply rounded-md p-2 text-gray-200;
-  @apply hover:bg-emerald-500 transition-all duration-300;
+  @apply border-2 border-solid border-rose-500;
+  @apply rounded-md p-2;
+  @apply hover:bg-rose-500 transition-all duration-300;
+}
+
+:root {
+  --scrollbar-width: 12px;
+  --scrollbar-track-color: #020617;
+  --scrollbar-thumb-color: #1e293b;
+  --scrollbar-thumb-hover-color: #475569;
+}
+
+/* For WebKit browsers */
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover-color);
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
 }

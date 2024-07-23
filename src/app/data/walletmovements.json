@@ -5,7 +5,8 @@
     "amount": 3000,
     "description": "Monthly salary",
     "activityType": "work",
-    "date": "2024-07-01"
+    "date": "2024-07-01",
+    "balance": 21545
   },
   {
     "type": "expense",
@@ -13,7 +14,8 @@
     "amount": 150,
     "description": "Grocery shopping",
     "activityType": "personal",
-    "date": "2024-07-02"
+    "date": "2024-07-02",
+    "balance": 18545
   },
   {
     "type": "income",
@@ -21,7 +23,8 @@
     "amount": 500,
     "description": "Freelance work payment",
     "activityType": "work",
-    "date": "2024-07-05"
+    "date": "2024-07-05",
+    "balance": 18695
   },
   {
     "type": "expense",
@@ -29,7 +32,8 @@
     "amount": 50,
     "description": "Movie tickets",
     "activityType": "fun",
-    "date": "2024-07-06"
+    "date": "2024-07-06",
+    "balance": 18195
   },
   {
     "type": "expense",
@@ -37,7 +41,8 @@
     "amount": 200,
     "description": "Electricity bill",
     "activityType": "home",
-    "date": "2024-07-07"
+    "date": "2024-07-07",
+    "balance": 18245
   },
   {
     "type": "income",
@@ -45,7 +50,8 @@
     "amount": 800,
     "description": "Dividends from stocks",
     "activityType": "investment",
-    "date": "2024-07-10"
+    "date": "2024-07-10",
+    "balance": 18445
   },
   {
     "type": "expense",
@@ -53,7 +59,8 @@
     "amount": 100,
     "description": "Gasoline",
     "activityType": "commute",
-    "date": "2024-07-12"
+    "date": "2024-07-12",
+    "balance": 17645
   },
   {
     "type": "expense",
@@ -61,7 +68,8 @@
     "amount": 75,
     "description": "Dinner out",
     "activityType": "personal",
-    "date": "2024-07-15"
+    "date": "2024-07-15",
+    "balance": 17745
   },
   {
     "type": "income",
@@ -69,7 +77,8 @@
     "amount": 200,
     "description": "Birthday gift",
     "activityType": "personal",
-    "date": "2024-07-18"
+    "date": "2024-07-18",
+    "balance": 17820
   },
   {
     "type": "expense",
@@ -77,7 +86,8 @@
     "amount": 120,
     "description": "Doctor visit",
     "activityType": "health",
-    "date": "2024-07-20"
+    "date": "2024-07-20",
+    "balance": 17620
   },
   {
     "type": "income",
@@ -85,7 +95,8 @@
     "amount": 1500,
     "description": "Rental income",
     "activityType": "home",
-    "date": "2024-07-22"
+    "date": "2024-07-22",
+    "balance": 17740
   },
   {
     "type": "expense",
@@ -93,7 +104,8 @@
     "amount": 300,
     "description": "New clothes",
     "activityType": "personal",
-    "date": "2024-07-25"
+    "date": "2024-07-25",
+    "balance": 16240
   },
   {
     "type": "income",
@@ -101,7 +113,8 @@
     "amount": 600,
     "description": "Freelance project payment",
     "activityType": "work",
-    "date": "2024-07-28"
+    "date": "2024-07-28",
+    "balance": 16540
   },
   {
     "type": "expense",
@@ -109,7 +122,8 @@
     "amount": 500,
     "description": "Flight tickets",
     "activityType": "vacation",
-    "date": "2024-07-30"
+    "date": "2024-07-30",
+    "balance": 15940
   },
   {
     "type": "income",
@@ -117,7 +131,8 @@
     "amount": 3000,
     "description": "Monthly salary",
     "activityType": "work",
-    "date": "2024-06-01"
+    "date": "2024-06-01",
+    "balance": 16440
   },
   {
     "type": "expense",
@@ -125,7 +140,8 @@
     "amount": 120,
     "description": "Grocery shopping",
     "activityType": "personal",
-    "date": "2024-06-02"
+    "date": "2024-06-02",
+    "balance": 13440
   },
   {
     "type": "income",
@@ -133,7 +149,8 @@
     "amount": 600,
     "description": "Freelance work payment",
     "activityType": "work",
-    "date": "2024-06-05"
+    "date": "2024-06-05",
+    "balance": 13560
   },
   {
     "type": "expense",
@@ -141,7 +158,8 @@
     "amount": 80,
     "description": "Concert tickets",
     "activityType": "fun",
-    "date": "2024-06-06"
+    "date": "2024-06-06",
+    "balance": 12960
   },
   {
     "type": "expense",
@@ -149,7 +167,8 @@
     "amount": 180,
     "description": "Water bill",
     "activityType": "home",
-    "date": "2024-06-07"
+    "date": "2024-06-07",
+    "balance": 13040
   },
   {
     "type": "income",
@@ -157,7 +176,8 @@
     "amount": 1000,
     "description": "Stock dividends",
     "activityType": "investment",
-    "date": "2024-06-10"
+    "date": "2024-06-10",
+    "balance": 13220
   },
   {
     "type": "expense",
@@ -165,7 +185,8 @@
     "amount": 70,
     "description": "Public transport pass",
     "activityType": "commute",
-    "date": "2024-06-12"
+    "date": "2024-06-12",
+    "balance": 12220
   },
   {
     "type": "expense",
@@ -173,7 +194,8 @@
     "amount": 85,
     "description": "Lunch with friends",
     "activityType": "personal",
-    "date": "2024-06-15"
+    "date": "2024-06-15",
+    "balance": 12290
   },
   {
     "type": "income",
@@ -181,7 +203,8 @@
     "amount": 250,
     "description": "Anniversary gift",
     "activityType": "personal",
-    "date": "2024-06-18"
+    "date": "2024-06-18",
+    "balance": 12375
   },
   {
     "type": "expense",
@@ -189,7 +212,8 @@
     "amount": 150,
     "description": "Pharmacy purchase",
     "activityType": "health",
-    "date": "2024-06-20"
+    "date": "2024-06-20",
+    "balance": 12125
   },
   {
     "type": "income",
@@ -197,7 +221,8 @@
     "amount": 1400,
     "description": "Rental income",
     "activityType": "home",
-    "date": "2024-06-22"
+    "date": "2024-06-22",
+    "balance": 12275
   },
   {
     "type": "expense",
@@ -205,7 +230,8 @@
     "amount": 350,
     "description": "New gadgets",
     "activityType": "personal",
-    "date": "2024-06-25"
+    "date": "2024-06-25",
+    "balance": 10875
   },
   {
     "type": "income",
@@ -213,7 +239,8 @@
     "amount": 700,
     "description": "Freelance project payment",
     "activityType": "work",
-    "date": "2024-06-28"
+    "date": "2024-06-28",
+    "balance": 11225
   },
   {
     "type": "expense",
@@ -221,7 +248,8 @@
     "amount": 450,
     "description": "Hotel booking",
     "activityType": "vacation",
-    "date": "2024-06-30"
+    "date": "2024-06-30",
+    "balance": 10525
   },
   {
     "type": "income",
@@ -229,7 +257,8 @@
     "amount": 3200,
     "description": "Monthly salary",
     "activityType": "work",
-    "date": "2024-05-01"
+    "date": "2024-05-01",
+    "balance": 10975
   },
   {
     "type": "expense",
@@ -237,7 +266,8 @@
     "amount": 130,
     "description": "Grocery shopping",
     "activityType": "personal",
-    "date": "2024-05-03"
+    "date": "2024-05-03",
+    "balance": 7775
   },
   {
     "type": "income",
@@ -245,7 +275,8 @@
     "amount": 400,
     "description": "Freelance work payment",
     "activityType": "work",
-    "date": "2024-05-05"
+    "date": "2024-05-05",
+    "balance": 7905
   },
   {
     "type": "expense",
@@ -253,7 +284,8 @@
     "amount": 60,
     "description": "Theater tickets",
     "activityType": "fun",
-    "date": "2024-05-06"
+    "date": "2024-05-06",
+    "balance": 7505
   },
   {
     "type": "expense",
@@ -261,7 +293,8 @@
     "amount": 200,
     "description": "Gas bill",
     "activityType": "home",
-    "date": "2024-05-07"
+    "date": "2024-05-07",
+    "balance": 7565
   },
   {
     "type": "income",
@@ -269,7 +302,8 @@
     "amount": 900,
     "description": "Dividends from mutual funds",
     "activityType": "investment",
-    "date": "2024-05-10"
+    "date": "2024-05-10",
+    "balance": 7765
   },
   {
     "type": "expense",
@@ -277,7 +311,8 @@
     "amount": 90,
     "description": "Car maintenance",
     "activityType": "commute",
-    "date": "2024-05-12"
+    "date": "2024-05-12",
+    "balance": 6865
   },
   {
     "type": "expense",
@@ -285,7 +320,8 @@
     "amount": 95,
     "description": "Dinner at a restaurant",
     "activityType": "personal",
-    "date": "2024-05-15"
+    "date": "2024-05-15",
+    "balance": 6955
   },
   {
     "type": "income",
@@ -293,7 +329,8 @@
     "amount": 300,
     "description": "Graduation gift",
     "activityType": "personal",
-    "date": "2024-05-18"
+    "date": "2024-05-18",
+    "balance": 7050
   },
   {
     "type": "expense",
@@ -301,7 +338,8 @@
     "amount": 110,
     "description": "Gym membership",
     "activityType": "health",
-    "date": "2024-05-20"
+    "date": "2024-05-20",
+    "balance": 6750
   },
   {
     "type": "income",
@@ -309,7 +347,8 @@
     "amount": 1600,
     "description": "Rental income",
     "activityType": "home",
-    "date": "2024-05-22"
+    "date": "2024-05-22",
+    "balance": 6860
   },
   {
     "type": "expense",
@@ -317,7 +356,8 @@
     "amount": 280,
     "description": "Books and supplies",
     "activityType": "personal",
-    "date": "2024-05-25"
+    "date": "2024-05-25",
+    "balance": 5260
   },
   {
     "type": "income",
@@ -325,7 +365,8 @@
     "amount": 500,
     "description": "Freelance project payment",
     "activityType": "work",
-    "date": "2024-05-28"
+    "date": "2024-05-28",
+    "balance": 5540
   },
   {
     "type": "expense",
@@ -333,7 +374,8 @@
     "amount": 520,
     "description": "Train tickets",
     "activityType": "vacation",
-    "date": "2024-05-30"
+    "date": "2024-05-30",
+    "balance": 5040
   },
   {
     "type": "income",
@@ -341,7 +383,8 @@
     "amount": 3100,
     "description": "Monthly salary",
     "activityType": "work",
-    "date": "2024-04-01"
+    "date": "2024-04-01",
+    "balance": 5560
   },
   {
     "type": "expense",
@@ -349,7 +392,8 @@
     "amount": 140,
     "description": "Grocery shopping",
     "activityType": "personal",
-    "date": "2024-04-02"
+    "date": "2024-04-02",
+    "balance": 2460
   },
   {
     "type": "income",
@@ -357,7 +401,8 @@
     "amount": 550,
     "description": "Freelance work payment",
     "activityType": "work",
-    "date": "2024-04-05"
+    "date": "2024-04-05",
+    "balance": 2600
   },
   {
     "type": "expense",
@@ -365,7 +410,8 @@
     "amount": 40,
     "description": "Amusement park tickets",
     "activityType": "fun",
-    "date": "2024-04-06"
+    "date": "2024-04-06",
+    "balance": 2050
   },
   {
     "type": "expense",
@@ -373,7 +419,8 @@
     "amount": 220,
     "description": "Internet bill",
     "activityType": "home",
-    "date": "2024-04-07"
+    "date": "2024-04-07",
+    "balance": 2090
   },
   {
     "type": "income",
@@ -381,7 +428,8 @@
     "amount": 950,
     "description": "Bond interest",
     "activityType": "investment",
-    "date": "2024-04-10"
+    "date": "2024-04-10",
+    "balance": 2310
   },
   {
     "type": "expense",
@@ -389,7 +437,8 @@
     "amount": 100,
     "description": "Uber rides",
     "activityType": "commute",
-    "date": "2024-04-12"
+    "date": "2024-04-12",
+    "balance": 1360
   },
   {
     "type": "expense",
@@ -397,7 +446,8 @@
     "amount": 110,
     "description": "Family dinner",
     "activityType": "personal",
-    "date": "2024-04-15"
+    "date": "2024-04-15",
+    "balance": 1460
   },
   {
     "type": "income",
@@ -405,7 +455,8 @@
     "amount": 280,
     "description": "Holiday gift",
     "activityType": "personal",
-    "date": "2024-04-18"
+    "date": "2024-04-18",
+    "balance": 1570
   },
   {
     "type": "expense",
@@ -413,7 +464,8 @@
     "amount": 130,
     "description": "Dental checkup",
     "activityType": "health",
-    "date": "2024-04-20"
+    "date": "2024-04-20",
+    "balance": 1290
   },
   {
     "type": "income",
@@ -421,7 +473,8 @@
     "amount": 1550,
     "description": "Rental income",
     "activityType": "home",
-    "date": "2024-04-22"
+    "date": "2024-04-22",
+    "balance": 1420
   },
   {
     "type": "expense",
@@ -429,7 +482,8 @@
     "amount": 300,
     "description": "Electronics purchase",
     "activityType": "personal",
-    "date": "2024-04-25"
+    "date": "2024-04-25",
+    "balance": -130
   },
   {
     "type": "income",
@@ -437,7 +491,8 @@
     "amount": 650,
     "description": "Freelance project payment",
     "activityType": "work",
-    "date": "2024-04-28"
+    "date": "2024-04-28",
+    "balance": 170
   },
   {
     "type": "expense",
@@ -445,6 +500,7 @@
     "amount": 480,
     "description": "Vacation package",
     "activityType": "vacation",
-    "date": "2024-04-30"
+    "date": "2024-04-30",
+    "balance": -480
   }
 ]

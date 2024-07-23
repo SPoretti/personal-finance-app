@@ -36,7 +36,7 @@ const LineChart = ({ data }: LineChartProps) => {
     labels: data.labels,
     datasets: [
       {
-        label: "",
+        label: "Balance",
         data: data.values,
         borderColor: "#36A2EB", // Line color
         backgroundColor: "rgba(54, 162, 235, 0.2)", // Fill color under the line
@@ -84,7 +84,7 @@ const LineChart = ({ data }: LineChartProps) => {
       x: {
         title: {
           display: true,
-          text: "Days",
+          text: "",
           color: "rgba(229, 231, 235, 1)",
         },
         ticks: {
@@ -94,7 +94,7 @@ const LineChart = ({ data }: LineChartProps) => {
       y: {
         title: {
           display: true,
-          text: "€",
+          text: "",
           color: "rgba(229, 231, 235, 1)",
         },
         ticks: {
@@ -105,7 +105,7 @@ const LineChart = ({ data }: LineChartProps) => {
   };
 
   return (
-    <div className="w-full h-40 mx-auto">
+    <div className="w-full h-full mx-auto">
       <Line data={chartData} options={chartOptions} />
     </div>
   );
