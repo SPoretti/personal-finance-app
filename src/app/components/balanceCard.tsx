@@ -93,7 +93,7 @@ export default function BalanceCard() {
   }, []);
 
   return (
-    <div className="h-full w-full bg-neutral-100 bg-opacity-40 shadow-xl rounded-xl flex flex-col justify-between p-4">
+    <div className="h-full w-full bg-gray-500 bg-opacity-40 shadow-xl rounded-xl flex flex-col justify-between p-4">
       <h1 className="text-3xl text-gray-200 mb-4">Wallet</h1>
       <div className="text-xl text-gray-300 mb-4">
         <p>Current Balance:</p>
@@ -105,7 +105,7 @@ export default function BalanceCard() {
           </p>
           {monthlyNetValue.previousMonthNet !== 0 &&
             monthlyNetValue.percentageChange !== null && (
-              <p className="text-xl text-green-300 mt-2">
+              <p className="text-xl text-rose-300 mt-2">
                 Percentage Change from Last Month:{" "}
                 {monthlyNetValue.percentageChange.toFixed(2)}%
               </p>
@@ -113,10 +113,7 @@ export default function BalanceCard() {
         </div>
       </div>
       <div className="w-full flex justify-end">
-        <a
-          className="border-2 border-solid border-emerald-500 rounded-md p-2 text-gray-200"
-          href="/wallet"
-        >
+        <a className="buttonBasics" href="/wallet">
           Dettagli
         </a>
       </div>

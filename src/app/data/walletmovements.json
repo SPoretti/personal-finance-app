@@ -84,7 +84,7 @@
     "source": "Rental",
     "amount": 1500,
     "description": "Rental income",
-    "activityType": "investment",
+    "activityType": "home",
     "date": "2024-07-22"
   },
   {
@@ -110,5 +110,341 @@
     "description": "Flight tickets",
     "activityType": "vacation",
     "date": "2024-07-30"
+  },
+  {
+    "type": "income",
+    "source": "Salary",
+    "amount": 3000,
+    "description": "Monthly salary",
+    "activityType": "work",
+    "date": "2024-06-01"
+  },
+  {
+    "type": "expense",
+    "category": "food",
+    "amount": 120,
+    "description": "Grocery shopping",
+    "activityType": "personal",
+    "date": "2024-06-02"
+  },
+  {
+    "type": "income",
+    "source": "Freelance",
+    "amount": 600,
+    "description": "Freelance work payment",
+    "activityType": "work",
+    "date": "2024-06-05"
+  },
+  {
+    "type": "expense",
+    "category": "entertainment",
+    "amount": 80,
+    "description": "Concert tickets",
+    "activityType": "fun",
+    "date": "2024-06-06"
+  },
+  {
+    "type": "expense",
+    "category": "utilities",
+    "amount": 180,
+    "description": "Water bill",
+    "activityType": "home",
+    "date": "2024-06-07"
+  },
+  {
+    "type": "income",
+    "source": "Investment",
+    "amount": 1000,
+    "description": "Stock dividends",
+    "activityType": "investment",
+    "date": "2024-06-10"
+  },
+  {
+    "type": "expense",
+    "category": "transport",
+    "amount": 70,
+    "description": "Public transport pass",
+    "activityType": "commute",
+    "date": "2024-06-12"
+  },
+  {
+    "type": "expense",
+    "category": "food",
+    "amount": 85,
+    "description": "Lunch with friends",
+    "activityType": "personal",
+    "date": "2024-06-15"
+  },
+  {
+    "type": "income",
+    "source": "Gift",
+    "amount": 250,
+    "description": "Anniversary gift",
+    "activityType": "personal",
+    "date": "2024-06-18"
+  },
+  {
+    "type": "expense",
+    "category": "health",
+    "amount": 150,
+    "description": "Pharmacy purchase",
+    "activityType": "health",
+    "date": "2024-06-20"
+  },
+  {
+    "type": "income",
+    "source": "Rental",
+    "amount": 1400,
+    "description": "Rental income",
+    "activityType": "home",
+    "date": "2024-06-22"
+  },
+  {
+    "type": "expense",
+    "category": "shopping",
+    "amount": 350,
+    "description": "New gadgets",
+    "activityType": "personal",
+    "date": "2024-06-25"
+  },
+  {
+    "type": "income",
+    "source": "Freelance",
+    "amount": 700,
+    "description": "Freelance project payment",
+    "activityType": "work",
+    "date": "2024-06-28"
+  },
+  {
+    "type": "expense",
+    "category": "travel",
+    "amount": 450,
+    "description": "Hotel booking",
+    "activityType": "vacation",
+    "date": "2024-06-30"
+  },
+  {
+    "type": "income",
+    "source": "Salary",
+    "amount": 3200,
+    "description": "Monthly salary",
+    "activityType": "work",
+    "date": "2024-05-01"
+  },
+  {
+    "type": "expense",
+    "category": "food",
+    "amount": 130,
+    "description": "Grocery shopping",
+    "activityType": "personal",
+    "date": "2024-05-03"
+  },
+  {
+    "type": "income",
+    "source": "Freelance",
+    "amount": 400,
+    "description": "Freelance work payment",
+    "activityType": "work",
+    "date": "2024-05-05"
+  },
+  {
+    "type": "expense",
+    "category": "entertainment",
+    "amount": 60,
+    "description": "Theater tickets",
+    "activityType": "fun",
+    "date": "2024-05-06"
+  },
+  {
+    "type": "expense",
+    "category": "utilities",
+    "amount": 200,
+    "description": "Gas bill",
+    "activityType": "home",
+    "date": "2024-05-07"
+  },
+  {
+    "type": "income",
+    "source": "Investment",
+    "amount": 900,
+    "description": "Dividends from mutual funds",
+    "activityType": "investment",
+    "date": "2024-05-10"
+  },
+  {
+    "type": "expense",
+    "category": "transport",
+    "amount": 90,
+    "description": "Car maintenance",
+    "activityType": "commute",
+    "date": "2024-05-12"
+  },
+  {
+    "type": "expense",
+    "category": "food",
+    "amount": 95,
+    "description": "Dinner at a restaurant",
+    "activityType": "personal",
+    "date": "2024-05-15"
+  },
+  {
+    "type": "income",
+    "source": "Gift",
+    "amount": 300,
+    "description": "Graduation gift",
+    "activityType": "personal",
+    "date": "2024-05-18"
+  },
+  {
+    "type": "expense",
+    "category": "health",
+    "amount": 110,
+    "description": "Gym membership",
+    "activityType": "health",
+    "date": "2024-05-20"
+  },
+  {
+    "type": "income",
+    "source": "Rental",
+    "amount": 1600,
+    "description": "Rental income",
+    "activityType": "home",
+    "date": "2024-05-22"
+  },
+  {
+    "type": "expense",
+    "category": "shopping",
+    "amount": 280,
+    "description": "Books and supplies",
+    "activityType": "personal",
+    "date": "2024-05-25"
+  },
+  {
+    "type": "income",
+    "source": "Freelance",
+    "amount": 500,
+    "description": "Freelance project payment",
+    "activityType": "work",
+    "date": "2024-05-28"
+  },
+  {
+    "type": "expense",
+    "category": "travel",
+    "amount": 520,
+    "description": "Train tickets",
+    "activityType": "vacation",
+    "date": "2024-05-30"
+  },
+  {
+    "type": "income",
+    "source": "Salary",
+    "amount": 3100,
+    "description": "Monthly salary",
+    "activityType": "work",
+    "date": "2024-04-01"
+  },
+  {
+    "type": "expense",
+    "category": "food",
+    "amount": 140,
+    "description": "Grocery shopping",
+    "activityType": "personal",
+    "date": "2024-04-02"
+  },
+  {
+    "type": "income",
+    "source": "Freelance",
+    "amount": 550,
+    "description": "Freelance work payment",
+    "activityType": "work",
+    "date": "2024-04-05"
+  },
+  {
+    "type": "expense",
+    "category": "entertainment",
+    "amount": 40,
+    "description": "Amusement park tickets",
+    "activityType": "fun",
+    "date": "2024-04-06"
+  },
+  {
+    "type": "expense",
+    "category": "utilities",
+    "amount": 220,
+    "description": "Internet bill",
+    "activityType": "home",
+    "date": "2024-04-07"
+  },
+  {
+    "type": "income",
+    "source": "Investment",
+    "amount": 950,
+    "description": "Bond interest",
+    "activityType": "investment",
+    "date": "2024-04-10"
+  },
+  {
+    "type": "expense",
+    "category": "transport",
+    "amount": 100,
+    "description": "Uber rides",
+    "activityType": "commute",
+    "date": "2024-04-12"
+  },
+  {
+    "type": "expense",
+    "category": "food",
+    "amount": 110,
+    "description": "Family dinner",
+    "activityType": "personal",
+    "date": "2024-04-15"
+  },
+  {
+    "type": "income",
+    "source": "Gift",
+    "amount": 280,
+    "description": "Holiday gift",
+    "activityType": "personal",
+    "date": "2024-04-18"
+  },
+  {
+    "type": "expense",
+    "category": "health",
+    "amount": 130,
+    "description": "Dental checkup",
+    "activityType": "health",
+    "date": "2024-04-20"
+  },
+  {
+    "type": "income",
+    "source": "Rental",
+    "amount": 1550,
+    "description": "Rental income",
+    "activityType": "home",
+    "date": "2024-04-22"
+  },
+  {
+    "type": "expense",
+    "category": "shopping",
+    "amount": 300,
+    "description": "Electronics purchase",
+    "activityType": "personal",
+    "date": "2024-04-25"
+  },
+  {
+    "type": "income",
+    "source": "Freelance",
+    "amount": 650,
+    "description": "Freelance project payment",
+    "activityType": "work",
+    "date": "2024-04-28"
+  },
+  {
+    "type": "expense",
+    "category": "travel",
+    "amount": 480,
+    "description": "Vacation package",
+    "activityType": "vacation",
+    "date": "2024-04-30"
   }
 ]

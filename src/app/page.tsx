@@ -1,5 +1,6 @@
 import PieCard from "./components/pieCard";
 import BalanceCard from "./components/balanceCard";
+import WideCard from "./components/wideCard";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       </div>
       <div className="w-full h-1/2 flex flex-row p-5">
         <div className="w-full h-full rounded-xl border-gray-800 border-solid border-4">
-          <h1>Home</h1>
+          <WideCard />
         </div>
       </div>
     </div>

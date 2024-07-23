@@ -32,9 +32,11 @@ export default function PieCard() {
     const activityTypeCounts: Record<string, number> = {};
 
     movements.forEach((movement) => {
-      if (movement.activityType) {
-        activityTypeCounts[movement.activityType] =
-          (activityTypeCounts[movement.activityType] || 0) + 1;
+      if (movement.type === "expense") {
+        if (movement.activityType) {
+          activityTypeCounts[movement.activityType] =
+            (activityTypeCounts[movement.activityType] || 0) + 1;
+        }
       }
     });
 
@@ -49,7 +51,7 @@ export default function PieCard() {
   }, []);
 
   return (
-    <div className="h-full w-full bg-neutral-100 bg-opacity-40 shadow-xl rounded-xl flex flex-col p-4">
+    <div className="h-full w-full bg-gray-500 bg-opacity-40 shadow-xl rounded-xl flex flex-col p-4">
       <h1 className="text-3xl text-gray-200 mb-4">
         Pie Graph by Activity Type
       </h1>
@@ -57,10 +59,7 @@ export default function PieCard() {
         <PieGraph data={chartData} />
       </div>
       <div className="w-full flex justify-end">
-        <a
-          className="border-2 border-solid border-emerald-500 rounded-md p-2 text-gray-200"
-          href="/wallet"
-        >
+        <a className="buttonBasics" href="/wallet">
           Dettagli
         </a>
       </div>

@@ -9,3 +9,9 @@
   @apply shadow-lg;
   @apply w-4/5 h-10 my-2 flex items-center justify-center;
 }
+
+.buttonBasics {
+  @apply border-2 border-solid border-emerald-500;
+  @apply rounded-md p-2 text-gray-200;
+  @apply hover:bg-emerald-500 transition-all duration-300;
+}

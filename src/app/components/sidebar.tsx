@@ -1,6 +1,14 @@
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faHome,
+  faMoneyBillWave,
+  faChartLine,
+  faCog,
+  faInfoCircle,
+} from "@fortawesome/free-solid-svg-icons";
 
-export default function sidebar() {
+export default function Sidebar() {
   return (
     <nav className="w-1/4 min-h-screen bg-gray-900 flex flex-col justify-between">
       <div>
@@ -9,24 +17,26 @@ export default function sidebar() {
         </div>
         <div className="w-full flex flex-col items-center">
           <Link href="/" className="sidebar-list-item">
+            <FontAwesomeIcon icon={faHome} className="mr-3 h-8" />
             Home
           </Link>
           <Link href="/expenses" className="sidebar-list-item">
+            <FontAwesomeIcon icon={faMoneyBillWave} className="mr-3 h-8" />
             Expenses
           </Link>
           <Link href="/income" className="sidebar-list-item">
+            <FontAwesomeIcon icon={faChartLine} className="mr-3 h-8" />
             Income
           </Link>
-          <Link href="/news" className="sidebar-list-item">
-            News
-          </Link>
           <Link href="/settings" className="sidebar-list-item">
+            <FontAwesomeIcon icon={faCog} className="mr-3 h-8" />
             Settings
           </Link>
         </div>
       </div>
-      <div className="w-full flex justify-center bg-gradient-to-b from-gray-800 to-gray-700">
-        <Link href="/credits" className="text-gray-300 mb-5">
+      <div className="w-full flex justify-center">
+        <Link href="/credits" className="text-gray-300 mb-5 flex items-center">
+          <FontAwesomeIcon icon={faInfoCircle} className="mr-2 h-full" />
           Credits
         </Link>
       </div>
