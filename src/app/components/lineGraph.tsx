@@ -38,7 +38,7 @@ const LineChart = ({ data }: LineChartProps) => {
       {
         label: "Balance",
         data: data.values,
-        borderColor: "#36A2EB", // Line color
+        borderColor: "#22d3ee", // Line color
         backgroundColor: "rgba(54, 162, 235, 0.2)", // Fill color under the line
         borderWidth: 2,
         pointBackgroundColor: "#FF6384", // Point color

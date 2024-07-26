@@ -6,7 +6,7 @@ import "@fontsource/inter/700.css"; // Import Inter font bold weight
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen flex-col dark:bg-gray-900 w-3/4 ml-auto">
+    <div className="flex flex-col h-screen w-full">
       <div className="w-full h-1/2 flex flex-row">
         <div className="w-1/2 h-full p-5">
           <div className="w-full h-full">

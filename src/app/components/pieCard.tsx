@@ -52,7 +52,7 @@ export default function PieCard() {
   }, []);
 
   return (
-    <div className="h-full w-full dark:bg-gradient-to-tr dark:from-gray-800 dark:to-gray-900 shadow-xl rounded-xl flex flex-col p-4">
+    <div className="h-full w-full bg-gradient-to-tr from-cyan-300 to-cyan-200 dark:from-slate-800 dark:to-slate-900 shadow-xl rounded-xl flex flex-col p-4">
       <h1 className="text-3xl mb-4">Pie Graph by Activity Type</h1>
       <div className="flex-1 flex items-center justify-center mb-4">
         <PieGraph data={chartData} />

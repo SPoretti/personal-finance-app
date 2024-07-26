@@ -18,9 +18,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider>
-          <main className="min-h-screen flex flex-row">
-            <Sidebar />
-            {children}
+          <main className="min-h-screen flex flex-row w-full">
+            <div className="min-h-screen w-1/4">
+              <Sidebar />
+            </div>
+            <div className="min-h-screen w-3/4">{children}</div>
           </main>
         </ThemeProvider>
       </body>

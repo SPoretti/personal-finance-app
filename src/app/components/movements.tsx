@@ -52,11 +52,11 @@ export default function Movements() {
   }, [viewOption]); // Depend on viewOption to re-run the effect when it changes
 
   return (
-    <div className="h-full w-full dark:bg-gradient-to-r dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 shadow-xl rounded-xl flex flex-col p-4">
+    <div className="h-full w-full bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-400 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800 shadow-xl rounded-xl flex flex-col p-4">
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl dark:text-gray-200">List</h1>
+        <h1 className="text-3xl dark:text-slate-200">List</h1>
         <select
-          className="p-2 rounded bg-transparent border-rose-500 border dark:text-gray-200 outline-none"
+          className="p-2 rounded bg-transparent border-slate-200 border dark:text-slate-200 outline-none"
           value={viewOption}
           onChange={(e) => setViewOption(e.target.value as ViewOption)}
         >
@@ -65,11 +65,11 @@ export default function Movements() {
         </select>
       </div>
       <div className="flex-1 overflow-y-auto">
-        <ul className="text-gray-200">
+        <ul>
           {filteredMovements.map((movement, index) => (
             <li
               key={index}
-              className="mb-2 p-2 shadow-md dark:bg-gradient-to-r dark:from-slate-700 dark:via-slate-800 dark:to-slate-700 rounded"
+              className="mb-2 p-2 shadow-md bg-gradient-to-r from-cyan-300 to-cyan-200 dark:from-slate-700 dark:via-slate-800 dark:to-slate-700 rounded"
             >
               <div className="flex justify-between">
                 <span>{new Date(movement.date).toLocaleDateString()}</span>
@@ -83,7 +83,7 @@ export default function Movements() {
                   {movement.type === "income" ? "+" : "-"}${movement.amount}
                 </span>
               </div>
-              <div className="text-sm dark:text-gray-400">
+              <div className="text-sm dark:text-slate-400">
                 {movement.description || movement.category || "No description"}
               </div>
             </li>

@@ -7,25 +7,43 @@
 @import url("@fontsource/inter/400.css"); /* Import Inter font regular weight */
 @import url("@fontsource/inter/700.css"); /* Import Inter font bold weight */
 
-/* Apply global font styles */
+/* Apply global transition styles */
+* {
+  @apply transition-all duration-300;
+}
+
+/* Apply global font styles  @apply overflow-hidden;*/
 body {
   font-family: "Inter", sans-serif;
-  color: #e5e7eb; /* Tailwind's text-gray-200 color */
+  @apply text-slate-800 dark:text-slate-200;
+  @apply bg-cyan-300 dark:bg-slate-900;
 }
 
 .sidebar-list-item {
-  @apply dark:hover:text-gray-500;
-  @apply dark:bg-gradient-to-r dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 rounded-xl;
-  @apply delay-75 transition-all duration-300;
-  @apply shadow-lg dark:text-gray-300;
-  @apply w-4/5 h-10 my-2 flex items-center justify-center;
+  @apply dark:bg-gradient-to-r dark:from-slate-900 dark:via-slate-800 dark:to-slate-900;
+  @apply bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-400;
+  @apply shadow-lg rounded-xl text-slate-800 dark:text-slate-300;
+  @apply w-4/5 h-10 my-2 flex items-center justify-center font-bold;
+  @apply hover:text-slate-500;
 }
 
 .buttonBasics {
-  @apply border-2 border-solid border-rose-500;
+  @apply border border-solid border-slate-200;
   @apply rounded-md p-2;
-  @apply hover:bg-rose-500 transition-all duration-300;
+  @apply hover:bg-cyan-500;
 }
+
+.form-input {
+  @apply bg-cyan-200 dark:bg-slate-600;
+  @apply border border-solid border-cyan-500 dark:border-slate-200;
+  @apply rounded-md p-2 w-full h-12 mx-2 mb-2;
+}
+
+.label {
+  @apply h-12 flex items-center mx-2 mb-2;
+}
+
+/* Scrollbar styles */
 
 :root {
   --scrollbar-width: 12px;
@@ -34,26 +52,42 @@ body {
   --scrollbar-thumb-hover-color: #475569;
 }
 
-/* For WebKit browsers */
+/* Toolkit browser scrollbar styles */
+/* Webkit */
 ::-webkit-scrollbar {
   width: var(--scrollbar-width);
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--scrollbar-track-color);
+  background-color: var(--scrollbar-track-color);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb-color);
-  border-radius: 6px;
+  background-color: var(--scrollbar-thumb-color);
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-hover-color);
+  background-color: var(--scrollbar-thumb-hover-color);
 }
 
-/* For Firefox */
+/* Firefox */
 * {
-  scrollbar-width: thin;
+  scrollbar-width: var(--scrollbar-width);
   scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+}
+
+*::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+
+*::-webkit-scrollbar-track {
+  background-color: var(--scrollbar-track-color);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover-color);
 }

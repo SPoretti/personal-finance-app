@@ -54,25 +54,14 @@ export default function WideCard() {
       (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
     );
 
-    // Initialize balance and arrays for storing results
-    let balance = 0;
+    // Initialize arrays for storing results
     const balanceChanges: number[] = [];
     const labels: string[] = [];
 
     // Iterate over the filtered movements
-    filteredMovements.forEach((movement) => {
-      // Check the type and adjust balance accordingly
-      if (movement.type === "income") {
-        balance += movement.amount;
-      } else if (movement.type === "expense") {
-        balance -= movement.amount;
-      } else {
-        // Handle unexpected type
-        console.error(`Unexpected movement type: ${movement.type}`);
-      }
-
-      // Store the updated balance and date in the arrays
-      balanceChanges.push(balance);
+    filteredMovements.forEach((movement, index) => {
+      // Use the provided balance from each movement
+      balanceChanges.push(movement.balance);
       labels.push(new Date(movement.date).toLocaleDateString());
     });
 
@@ -84,11 +73,11 @@ export default function WideCard() {
   }, [viewOption]);
 
   return (
-    <div className="h-full w-full dark:bg-gradient-to-r dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 shadow-xl rounded-xl flex flex-col p-4">
+    <div className="h-full w-full bg-gradient-to-r from-cyan-300 via-cyan-400 to-cyan-300 dark:from-slate-800 dark:via-slate-900 dark:to-slate-800 shadow-xl rounded-xl flex flex-col p-4">
       <div className="flex justify-between items-center mb-4">
-        <h1 className="text-3xl dark:text-gray-200">Movements</h1>
+        <h1 className="text-3xl dark:text-slate-200">Movements</h1>
         <select
-          className="p-2 rounded bg-transparent border-rose-500 border text-gray-200 outilne-none"
+          className="p-2 rounded bg-slate-800 border-slate-200 border text-slate-200 outline-none"
           value={viewOption}
           onChange={(e) => setViewOption(e.target.value as ViewOption)}
         >

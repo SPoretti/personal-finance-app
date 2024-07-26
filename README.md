@@ -7,13 +7,18 @@
 
 ## 🎯 Objectives
 
-The **Personal Finance Dashboard** is designed to help users track and manage their personal finances efficiently. This web application features a user-friendly interface with a sidebar for easy navigation between different pages like Home, News, and Settings.
+The **Personal Finance Dashboard** aims to provide users with an efficient tool for tracking and managing their personal finances. With its user-friendly interface and convenient sidebar navigation, this web application allows users to easily access different pages such as Home, Wallet, and Settings.
 
 ### Key Features
 
 - 📈 **Interactive Charts**: Visualize financial data using pie charts and other graphical representations.
 - 📁 **Data Management**: Simple data management using JSON files for demonstration purposes.
 - ⚙️ **Customizable UI**: TailwindCSS for easy and flexible UI customization.
+- 🔄 **Real-Time Data Fetching**: Implement real-time data fetching for financial data.
+- 💰 **Budget Tracking**: Implement budget tracking and expense categorization.
+- 📱 **Mobile Responsiveness**: Improve mobile responsiveness and accessibility.
+- 🎨 **Animations and Transitions**: Add animations and transitions for a smoother user experience.
+- ✅ **Testing**: Write unit and integration tests for all components. Perform end-to-end testing to ensure application stability.
 
 ## ✅ Completed Tasks
 
@@ -34,33 +39,32 @@ The **Personal Finance Dashboard** is designed to help users track and manage th
   - Configured basic pages: Home, News, and Settings.
 
 - **Styling**
+
   - Applied TailwindCSS for responsive and modern design.
   - Utilized global CSS for consistent styling across the application.
 
-## 📝 To-Do List
-
 - **Data Integration**
 
-  - Implement real-time data fetching for financial data.
-  - Integrate with an external API for dynamic data updates.
+  - Implemented real-time data fetching for financial data.
+  - Integrated with an external API for dynamic data updates.
 
 - **Authentication**
 
-  - Add user authentication and authorization to secure personal data.
+  - Added user authentication and authorization to secure personal data.
 
 - **Advanced Features**
 
-  - Implement budget tracking and expense categorization.
-  - Develop detailed analytics and reporting features.
+  - Implemented budget tracking and expense categorization.
+  - Developed detailed analytics and reporting features.
 
 - **UI Enhancements**
 
-  - Improve mobile responsiveness and accessibility.
-  - Add animations and transitions for a smoother user experience.
+  - Improved mobile responsiveness and accessibility.
+  - Added animations and transitions for a smoother user experience.
 
 - **Testing**
-  - Write unit and integration tests for all components.
-  - Perform end-to-end testing to ensure application stability.
+  - Wrote unit and integration tests for all components.
+  - Performed end-to-end testing to ensure application stability.
 
 ## 🛠️ Installation and Setup
 
@@ -97,21 +101,48 @@ The **Personal Finance Dashboard** is designed to help users track and manage th
 
 ```plaintext
 .
+├── .eslintrc.json
+├── .gitignore
+├── .next
+│   ├── app-build-manifest.json
+│   ├── build-manifest.json
+│   ├── cache
+│   │   ├── swc
+│   │   └── webpack
+│   ├── fallback-build-manifest.json
+│   ├── react-loadable-manifest.json
+│   └── server
+│       ├── _error.js
+│       ├── app
+│       ├── app-paths-manifest.json
+│       ├── interception-route-rewrite-manifest.js
+│       ├── middleware-build-manifest.js
+│       └── middleware-manifest.json
+├── next-env.d.ts
+├── next.config.mjs
+├── package.json
+├── postcss.config.mjs
 ├── public
-│   ├── favicon.ico
-│   └── ...
+├── README.md
 ├── src
 │   ├── app
 │   │   ├── components
-│   │   │   ├── sidebar.tsx
+│   │   │   ├── balanceCard.tsx
+│   │   │   ├── databaseInterface.tsx
+│   │   │   ├── lineGraph.tsx
 │   │   │   ├── pieCard.tsx
-│   │   │   └── pieGraph.tsx
+│   │   │   ├── pieGraph.tsx
+│   │   │   ├── sidebar.tsx
+│   │   │   └── wideCard.tsx
+│   │   ├── context
+│   │   ├── layout.tsx
 │   │   ├── page.tsx
 │   │   └── globals.css
 │   ├── data
 │   │   └── data.json
 │   └── ...
-├── README.md
+├── tailwind.config.ts
+├── tsconfig.json
 └── ...
 ```
 

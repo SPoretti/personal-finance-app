@@ -33,7 +33,7 @@ export default function BalanceCard() {
   }, []);
 
   return (
-    <div className="h-full w-full dark:bg-gradient-to-tr dark:from-gray-800 dark:to-gray-900 shadow-xl rounded-xl flex flex-col justify-between p-4">
+    <div className="h-full w-full bg-gradient-to-tr from-cyan-300 to-cyan-200 dark:from-slate-800 dark:to-slate-900 shadow-xl rounded-xl flex flex-col justify-between p-4">
       <h1 className="text-3xl">Wallet</h1>
       <div className="text-xl">
         <p>Current Balance:</p>
