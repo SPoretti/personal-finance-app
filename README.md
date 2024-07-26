@@ -1,13 +1,12 @@
 # 📊 Personal Finance Dashboard
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Framework](https://img.shields.io/badge/framework-Next.js-000000.svg)
 ![Language](https://img.shields.io/badge/language-TypeScript-007ACC.svg)
 ![CSS](https://img.shields.io/badge/css-TailwindCSS-38B2AC.svg)
 
 ## 🎯 Objectives
 
-The **Personal Finance Dashboard** aims to provide users with an efficient tool for tracking and managing their personal finances. With its user-friendly interface and convenient sidebar navigation, this web application allows users to easily access different pages such as Home, Wallet, and Settings.
+This project is made with the intention of learning to use Next.js, TypeScript, and TailwindCSS. The main goal is to create a personal finance dashboard that allows users to track and manage their finances. The project will include features such as interactive charts, data management, budget tracking, and more.
 
 ### Key Features
 
@@ -148,7 +147,7 @@ The **Personal Finance Dashboard** aims to provide users with an efficient tool 
 
 ## 📜 License
 
-This project is licensed under the MIT License (not actually). See the [LICENSE](LICENSE) file for details.
+This project is not licensed under any open-source license. You are free to use and modify the source code for personal or educational purposes. However, you are not allowed to distribute or sell this project or any derivative works for commercial purposes.
 
 ---
 
