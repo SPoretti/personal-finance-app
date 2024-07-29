@@ -1,3 +1,4 @@
+import "./globals.css";
 import PieCard from "./components/pieCard";
 import BalanceCard from "./components/balanceCard";
 import WideCard from "./components/wideCard";
