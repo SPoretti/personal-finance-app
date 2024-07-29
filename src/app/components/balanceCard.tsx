@@ -24,7 +24,7 @@ export default function BalanceCard() {
 
   useEffect(() => {
     // Initialize balance data
-    const lastMovement = walletMovements[0];
+    const lastMovement = walletMovements[walletMovements.length - 1];
     if (lastMovement) {
       setBalanceData({
         balance: lastMovement.balance,

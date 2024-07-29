@@ -38,13 +38,13 @@ const LineChart = ({ data }: LineChartProps) => {
       {
         label: "Balance",
         data: data.values,
-        borderColor: "#22d3ee", // Line color
-        backgroundColor: "rgba(54, 162, 235, 0.2)", // Fill color under the line
+        borderColor: "#22D3EE", // Line color (tailwindcss cyan-400)
+        backgroundColor: "rgba(59, 130, 246, 0.2)", // Fill color under the line (tailwindcss blue-500 with opacity)
         borderWidth: 2,
-        pointBackgroundColor: "#FF6384", // Point color
-        pointBorderColor: "#FFF", // Point border color
-        pointHoverBackgroundColor: "#FF6384", // Point hover color
-        pointHoverBorderColor: "#FFF", // Point hover border color
+        pointBackgroundColor: "#EF4444", // Point color (tailwindcss red-500)
+        pointBorderColor: "#FFFFFF", // Point border color (white)
+        pointHoverBackgroundColor: "#EF4444", // Point hover color (tailwindcss red-500)
+        pointHoverBorderColor: "#FFFFFF", // Point hover border color (white)
       },
     ],
   };
@@ -56,7 +56,7 @@ const LineChart = ({ data }: LineChartProps) => {
       legend: {
         position: "right" as const,
         labels: {
-          color: "rgba(229, 231, 235, 1)", // Text color for legend labels
+          color: "#E5E7EB", // Text color for legend labels (tailwindcss cool-gray-200)
         },
       },
       tooltip: {
@@ -66,9 +66,9 @@ const LineChart = ({ data }: LineChartProps) => {
           label: (tooltipItem: TooltipItem<"line">) =>
             `${tooltipItem.label}: ${tooltipItem.raw}`,
         },
-        backgroundColor: "rgba(31, 41, 55, 0.9)", // Background color for tooltip
-        titleColor: "rgba(229, 231, 235, 1)", // Text color for tooltip title
-        bodyColor: "rgba(229, 231, 235, 1)", // Text color for tooltip body
+        backgroundColor: "rgba(31, 41, 55, 0.9)", // Background color for tooltip (tailwindcss cool-gray-800 with opacity)
+        titleColor: "#E5E7EB", // Text color for tooltip title (tailwindcss cool-gray-200)
+        bodyColor: "#E5E7EB", // Text color for tooltip body (tailwindcss cool-gray-200)
         titleFont: {
           size: 14,
           weight: "bold",
@@ -85,20 +85,20 @@ const LineChart = ({ data }: LineChartProps) => {
         title: {
           display: true,
           text: "",
-          color: "rgba(229, 231, 235, 1)",
+          color: "#E5E7EB", // Text color for x-axis title (tailwindcss cool-gray-200)
         },
         ticks: {
-          color: "rgba(229, 231, 235, 1)",
+          color: "#E5E7EB", // Text color for x-axis ticks (tailwindcss cool-gray-200)
         },
       },
       y: {
         title: {
           display: true,
           text: "",
-          color: "rgba(229, 231, 235, 1)",
+          color: "#E5E7EB", // Text color for y-axis title (tailwindcss cool-gray-200)
         },
         ticks: {
-          color: "rgba(229, 231, 235, 1)",
+          color: "#E5E7EB", // Text color for y-axis ticks (tailwindcss cool-gray-200)
         },
       },
     },

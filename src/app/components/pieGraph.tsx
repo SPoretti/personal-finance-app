@@ -27,24 +27,24 @@ const PieChart = ({ data }: PieChartProps) => {
         label: "Dataset 1",
         data: data.values,
         backgroundColor: [
-          "#FF6384", // Red
-          "#36A2EB", // Blue
-          "#FFCE56", // Yellow
-          "#4BC0C0", // Teal
-          "#9966FF", // Purple
-          "#FF9F40", // Orange
-          "#FF61A6", // Pink (new color)
-          "#C0C0C0", // Silver (new color)
+          "#EF4444", // Red (tailwindcss red-500)
+          "#3B82F6", // Blue (tailwindcss blue-500)
+          "#F59E0B", // Yellow (tailwindcss yellow-500)
+          "#14B8A6", // Teal (tailwindcss teal-500)
+          "#8B5CF6", // Purple (tailwindcss purple-500)
+          "#F97316", // Orange (tailwindcss orange-500)
+          "#EC4899", // Pink (tailwindcss pink-500)
+          "#9CA3AF", // Silver (tailwindcss gray-400)
         ],
         hoverBackgroundColor: [
-          "#FF6384", // Red
-          "#36A2EB", // Blue
-          "#FFCE56", // Yellow
-          "#4BC0C0", // Teal
-          "#9966FF", // Purple
-          "#FF9F40", // Orange
-          "#FF61A6", // Pink (new color)
-          "#C0C0C0", // Silver (new color)
+          "#DC2626", // Red (tailwindcss red-600)
+          "#2563EB", // Blue (tailwindcss blue-600)
+          "#D97706", // Yellow (tailwindcss yellow-600)
+          "#0D9488", // Teal (tailwindcss teal-600)
+          "#7C3AED", // Purple (tailwindcss purple-600)
+          "#EA580C", // Orange (tailwindcss orange-600)
+          "#DB2777", // Pink (tailwindcss pink-600)
+          "#6B7280", // Silver (tailwindcss gray-500)
         ],
       },
     ],

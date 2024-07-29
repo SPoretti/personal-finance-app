@@ -1,7 +1,5 @@
-import { useState, useEffect, ChangeEvent, FormEvent } from "react";
-import walletMovementsData from "../data/walletmovements.json";
+import React, { useState } from "react";
 
-// Define TypeScript interfaces
 interface WalletMovement {
   type: string;
   source: string;
@@ -13,20 +11,9 @@ interface WalletMovement {
   balance: number;
 }
 
-interface FormData {
-  type: string;
-  source: string;
-  category: string;
-  amount: string; // Initially as string to handle input value
-  description: string;
-  activityType: string;
-  date: string;
-  balance: string; // Initially as string to handle input value
-}
-
-const WalletMovements: React.FC = () => {
+const DatabaseInterface: React.FC = () => {
   const [walletMovements, setWalletMovements] = useState<WalletMovement[]>([]);
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState({
     type: "",
     source: "",
     category: "",
@@ -34,62 +21,28 @@ const WalletMovements: React.FC = () => {
     description: "",
     activityType: "",
     date: "",
-    balance: "",
   });
 
-  useEffect(() => {
-    // Ensure walletMovementsData matches WalletMovement interface
-    const validData: WalletMovement[] = walletMovementsData.map((movement) => ({
-      type: movement.type || "",
-      source: movement.source || "",
-      category: movement.category || "",
-      amount: movement.amount || 0,
-      description: movement.description || "",
-      activityType: movement.activityType || "",
-      date: movement.date || "",
-      balance: movement.balance || 0,
-    }));
-    setWalletMovements(validData);
-  }, []);
-
   const handleChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+    event: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
   ) => {
-    const { name, value } = e.target;
+    const { name, value } = event.target;
     setFormData({
       ...formData,
-      [name]: value.toString(),
+      [name]: value,
     });
   };
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
 
-    // Validate date format
-    const isValidDate = (dateStr: string) => {
-      const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
-      return dateRegex.test(dateStr);
-    };
-
-    if (!isValidDate(formData.date)) {
-      alert("Invalid date format. Please use YYYY-MM-DD.");
-      return;
-    }
-
-    // Validate amount
     const amount = parseFloat(formData.amount);
-    if (isNaN(amount) || amount <= 0) {
-      alert("Amount must be a positive number.");
-      return;
-    }
-
-    // Calculate new balance
     const previousBalance =
       walletMovements.length > 0
         ? walletMovements[walletMovements.length - 1].balance
         : 0;
     const newBalance =
-      formData.type === "income"
+      formData.activityType === "income"
         ? previousBalance + amount
         : previousBalance - amount;
 
@@ -100,8 +53,15 @@ const WalletMovements: React.FC = () => {
       balance: newBalance,
     };
 
-    // Add new entry to walletMovements
-    setWalletMovements([...walletMovements, newEntry]);
+    // Add new entry to walletMovements and sort by date
+    const updatedWalletMovements = [...walletMovements, newEntry].sort(
+      (a, b) => new Date(a.date).getTime() - new Date(b.date).getTime(),
+    );
+    setWalletMovements(updatedWalletMovements);
+
+    // Dummy form submission
+    console.log("Form submitted successfully:", newEntry);
+    alert("Form submitted successfully");
 
     // Optionally, you can reset the form here
     setFormData({
@@ -112,7 +72,6 @@ const WalletMovements: React.FC = () => {
       description: "",
       activityType: "",
       date: "",
-      balance: "",
     });
   };
 
@@ -191,14 +150,6 @@ const WalletMovements: React.FC = () => {
               required
               className="form-input"
             />
-            <input
-              type="number"
-              name="balance"
-              value={formData.balance}
-              onChange={handleChange}
-              required
-              className="form-input"
-            />
             <button type="submit" className="buttonBasics w-full mx-2">
               Add Entry
             </button>
@@ -209,4 +160,4 @@ const WalletMovements: React.FC = () => {
   );
 };
 
-export default WalletMovements;
+export default DatabaseInterface;

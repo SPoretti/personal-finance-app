@@ -3,18 +3,17 @@
 @tailwind utilities;
 
 /* styles/globals.css */
-
-@import url("@fontsource/inter/400.css"); /* Import Inter font regular weight */
-@import url("@fontsource/inter/700.css"); /* Import Inter font bold weight */
+/* Import Inter font regular and bold weights */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 /* Apply global transition styles */
 * {
-  @apply transition-all duration-300;
+  @apply transition-all duration-150;
 }
 
 /* Apply global font styles  @apply overflow-hidden;*/
 body {
-  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
   @apply text-slate-800 dark:text-slate-200;
   @apply bg-cyan-300 dark:bg-slate-900;
 }

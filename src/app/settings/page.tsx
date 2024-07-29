@@ -16,7 +16,7 @@ export default function SettingsPage() {
         </div>
       </div>
       <div className="w-full h-fit p-4">
-        <Settings />
+        {/* <Settings /> */}
         <DatabaseInterface />
       </div>
     </div>

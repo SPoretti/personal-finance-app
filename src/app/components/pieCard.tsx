@@ -1,6 +1,7 @@
 "use client";
-import PieGraph from "./pieGraph";
+
 import { useEffect, useState } from "react";
+import PieGraph from "./pieGraph";
 import walletMovements from "../data/walletmovements.json";
 
 interface WalletMovement {
@@ -19,29 +20,42 @@ interface ChartData {
   values: number[];
 }
 
+type ViewOption = "currentMonth" | "allTransactions";
+
 export default function PieCard() {
   const [chartData, setChartData] = useState<ChartData>({
     labels: [],
     values: [],
   });
+  const [viewOption, setViewOption] = useState<ViewOption>("currentMonth");
 
   useEffect(() => {
-    // Type assertion for walletMovements
     const movements = walletMovements as WalletMovement[];
 
-    // Aggregate data by activityType
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const currentMonth = currentDate.getMonth();
+
+    const filteredMovements = movements.filter((movement) => {
+      const movementDate = new Date(movement.date);
+      if (viewOption === "currentMonth") {
+        return (
+          movementDate.getFullYear() === currentYear &&
+          movementDate.getMonth() === currentMonth
+        );
+      }
+      return true;
+    });
+
     const activityTypeCounts: Record<string, number> = {};
 
-    movements.forEach((movement) => {
-      if (movement.type === "expense") {
-        if (movement.activityType) {
-          activityTypeCounts[movement.activityType] =
-            (activityTypeCounts[movement.activityType] || 0) + 1;
-        }
+    filteredMovements.forEach((movement) => {
+      if (movement.activityType) {
+        activityTypeCounts[movement.activityType] =
+          (activityTypeCounts[movement.activityType] || 0) + 1;
       }
     });
 
-    // Convert aggregated data to chart data format
     const labels = Object.keys(activityTypeCounts);
     const values = Object.values(activityTypeCounts);
 
@@ -49,11 +63,21 @@ export default function PieCard() {
       labels,
       values,
     });
-  }, []);
+  }, [viewOption]);
 
   return (
     <div className="h-full w-full bg-gradient-to-tr from-cyan-300 to-cyan-200 dark:from-slate-800 dark:to-slate-900 shadow-xl rounded-xl flex flex-col p-4">
-      <h1 className="text-3xl mb-4">Pie Graph by Activity Type</h1>
+      <div className="flex justify-between items-center mb-4">
+        <h1 className="text-3xl">Pie Graph by Activity Type</h1>
+        <select
+          className="p-2 rounded bg-slate-800 border-slate-200 border text-slate-200 outline-none"
+          value={viewOption}
+          onChange={(e) => setViewOption(e.target.value as ViewOption)}
+        >
+          <option value="currentMonth">Current Month</option>
+          <option value="allTransactions">All Transactions</option>
+        </select>
+      </div>
       <div className="flex-1 flex items-center justify-center mb-4">
         <PieGraph data={chartData} />
       </div>

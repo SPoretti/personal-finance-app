@@ -16,19 +16,27 @@ interface ThemeContextProps {
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(() => {
+    if (typeof window !== "undefined") {
+      const savedTheme = localStorage.getItem("theme");
+      return savedTheme ? savedTheme === "dark" : true; // Default to dark mode
+    }
+    return true;
+  });
 
   useEffect(() => {
     const root = window.document.documentElement;
-    root.classList.add("dark"); // Initialize dark mode by default
-    const initialTheme = root.classList.contains("dark");
-    setIsDarkMode(initialTheme);
-  }, []);
+    if (isDarkMode) {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+  }, [isDarkMode]);
 
   const toggleTheme = () => {
-    const root = window.document.documentElement;
-    root.classList.toggle("dark", !isDarkMode);
-    setIsDarkMode(!isDarkMode);
+    const newMode = !isDarkMode;
+    setIsDarkMode(newMode);
+    localStorage.setItem("theme", newMode ? "dark" : "light");
   };
 
   return (

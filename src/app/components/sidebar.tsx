@@ -11,10 +11,10 @@ import Link from "next/link";
 export default function Sidebar() {
   return (
     <nav
-      className="w-full min-h-full  
+      className="w-1/4 min-h-full  
                 bg-gradient-to-b dark:from-slate-900 dark:to-slate-950 
                 from-cyan-300 to-cyan-500 
-                flex flex-col justify-between p-6 relative top-0 left-0"
+                flex flex-col justify-between p-6 fixed top-0 left-0"
     >
       <div>
         <div className="dark:text-slate-100 w-full flex items-center justify-center mb-8">
